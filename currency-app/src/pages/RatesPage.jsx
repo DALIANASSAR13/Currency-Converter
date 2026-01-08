@@ -112,7 +112,6 @@ const RatesPage = () => {
   const [lastUpdated, setLastUpdated] = useState('');
   const [showAddModal, setShowAddModal] = useState(false);
 
-  // 1. وظيفة جلب البيانات الحقيقية من الـ API
   const fetchLiveRates = async () => {
     try {
       const response = await fetch('https://open.er-api.com/v6/latest/USD');

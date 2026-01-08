@@ -14,19 +14,30 @@ const LandingPage = () => {
             <span className="text-2xl font-bold text-gray-800">CurrencyApp</span>
           </div>
           <div className="hidden md:flex space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-blue-600 font-medium">
-              Features
-            </a>
-            <a href="#rates" className="text-gray-600 hover:text-blue-600 font-medium">
-              Live Rates
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-blue-600 font-medium">
-              Contact
-            </a>
+            <Link 
+  to="/convert" 
+  className="text-gray-600 hover:text-blue-600 font-medium"
+>Features
+</Link>
+           
+                      <Link 
+  to="/rates" 
+  className="text-gray-600 hover:text-blue-600 font-medium"
+>
+   Live Rates
+</Link>
+
           </div>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+          <Link 
+  to="/convert" 
+  className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:scale-105"
+>  Get Started
+  
+  <ArrowRight size={20} />
+</Link>
+          {/* <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
             Get Started
-          </button>
+          </button> */}
         </div>
       </nav>
 
@@ -52,10 +63,12 @@ const LandingPage = () => {
   <ArrowRight size={20} />
 </Link>
             
-            <button className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition flex items-center justify-center gap-2">
-              <Eye className="h-5 w-5" />
-              View Live Rates
-            </button>
+          <Link 
+  to="/rates" 
+  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition"
+>
+  View Live Rates
+</Link>
           </div>
 
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-12"></div>
@@ -185,10 +198,10 @@ const LandingPage = () => {
           
           <div className="border-t border-gray-800 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 CurrencyApp. All rights reserved.
+              © 2026 CurrencyApp. All rights reserved.
             </p>
             <p className="text-gray-500 text-sm mt-2">
-              Made with ❤️ for seamless currency conversion worldwide
+              Made with love for seamless currency conversion worldwide
             </p>
           </div>
         </div>

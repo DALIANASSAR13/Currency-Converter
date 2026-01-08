@@ -14,12 +14,19 @@ const LandingPage = () => {
             <span className="text-2xl font-bold text-gray-800">CurrencyApp</span>
           </div>
           <div className="hidden md:flex space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-blue-600 font-medium">
-              Features
-            </a>
-            <a href="#rates" className="text-gray-600 hover:text-blue-600 font-medium">
-              Live Rates
-            </a>
+            <Link 
+  to="/convert" 
+  className="text-gray-600 hover:text-blue-600 font-medium"
+>Features
+</Link>
+           
+                      <Link 
+  to="/rates" 
+  className="text-gray-600 hover:text-blue-600 font-medium"
+>
+   Live Rates
+</Link>
+
           </div>
           <Link 
   to="/convert" 
@@ -56,10 +63,12 @@ const LandingPage = () => {
   <ArrowRight size={20} />
 </Link>
             
-            <button className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition flex items-center justify-center gap-2">
-              <Eye className="h-5 w-5" />
-              View Live Rates
-            </button>
+          <Link 
+  to="/rates" 
+  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition"
+>
+  View Live Rates
+</Link>
           </div>
 
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-12"></div>

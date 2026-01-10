@@ -10,7 +10,6 @@ const Converter = () => {
   const [currencyCodes, setCurrencyCodes] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // 1. جلب قائمة العملات
   useEffect(() => {
     fetch('https://open.er-api.com/v6/latest/USD')
       .then((res) => res.json())
@@ -21,7 +20,6 @@ const Converter = () => {
       .catch((err) => console.error("Error fetching currency list:", err));
   }, []);
 
-  // 2. جلب سعر الصرف والتحويل اللحظي
   useEffect(() => {
     const fetchExchangeRate = async () => {
       try {
@@ -50,7 +48,6 @@ const Converter = () => {
 
   return (
     <div className="min-h-screen bg-[#F3F7FA] font-sans text-slate-900 pb-20">
-      {/* Navbar */}
       <nav className="bg-white px-6 md:px-12 py-4 flex justify-between items-center shadow-sm border-b border-slate-100">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-[#2563EB] rounded-lg flex items-center justify-center text-white font-bold">B</div>
@@ -62,7 +59,6 @@ const Converter = () => {
         </div>
       </nav>
 
-      {/* Hero */}
       <div className="max-w-4xl mx-auto pt-16 pb-10 text-center px-4">
         <h1 className="text-4xl md:text-[56px] font-black text-slate-900 mb-4 tracking-tight leading-tight">Currency Converter</h1>
         <p className="text-slate-500 text-lg font-medium">Fast, secure, and reliable exchange rates.</p>
@@ -113,7 +109,6 @@ const Converter = () => {
           </div>
         </div>
 
-        {/* Results Display */}
         <div className="mt-16 text-center md:text-left">
           <p className="text-slate-400 font-bold mb-2 uppercase text-xs">{amount} {fromCurrency} =</p>
           <h2 className="text-6xl md:text-[84px] font-black text-[#2563EB] leading-none mb-6 tracking-tighter">

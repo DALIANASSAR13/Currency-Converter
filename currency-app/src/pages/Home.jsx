@@ -1,4 +1,3 @@
-// src/pages/LandingPage.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Zap, Globe, ArrowRight, Check, Eye } from 'lucide-react';
@@ -35,9 +34,7 @@ const LandingPage = () => {
   
   <ArrowRight size={20} />
 </Link>
-          {/* <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-            Get Started
-          </button> */}
+         
         </div>
       </nav>
 
